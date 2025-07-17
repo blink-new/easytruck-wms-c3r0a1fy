@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Header } from './components/layout/Header'
 import { Sidebar } from './components/layout/Sidebar'
 import { Dashboard } from './components/dashboard/Dashboard'
+import { InventoryManagement } from './components/inventory/InventoryManagement'
+import { MobileScannerInterface } from './components/mobile/MobileScannerInterface'
 import { blink } from './blink/client'
 import { Toaster } from './components/ui/toaster'
 
@@ -63,12 +65,7 @@ function App() {
       case 'dashboard':
         return <Dashboard />
       case 'inventory':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Inventory Management</h1>
-            <p className="text-gray-600">Inventory management features coming soon...</p>
-          </div>
-        )
+        return <InventoryManagement />
       case 'inbound':
         return (
           <div className="p-6">
@@ -84,12 +81,7 @@ function App() {
           </div>
         )
       case 'mobile':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Mobile Scanner Interface</h1>
-            <p className="text-gray-600">Mobile scanner interface coming soon...</p>
-          </div>
-        )
+        return <MobileScannerInterface />
       case 'reports':
         return (
           <div className="p-6">
