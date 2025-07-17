@@ -3,7 +3,11 @@ import { Header } from './components/layout/Header'
 import { Sidebar } from './components/layout/Sidebar'
 import { Dashboard } from './components/dashboard/Dashboard'
 import { InventoryManagement } from './components/inventory/InventoryManagement'
+import { InboundOperations } from './components/inbound/InboundOperations'
+import { OutboundOperations } from './components/outbound/OutboundOperations'
 import { MobileScannerInterface } from './components/mobile/MobileScannerInterface'
+import { ReportsAnalytics } from './components/reports/ReportsAnalytics'
+import { Settings } from './components/settings/Settings'
 import { blink } from './blink/client'
 import { Toaster } from './components/ui/toaster'
 
@@ -67,35 +71,15 @@ function App() {
       case 'inventory':
         return <InventoryManagement />
       case 'inbound':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Inbound Operations</h1>
-            <p className="text-gray-600">Inbound operations features coming soon...</p>
-          </div>
-        )
+        return <InboundOperations />
       case 'outbound':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Outbound Operations</h1>
-            <p className="text-gray-600">Outbound operations features coming soon...</p>
-          </div>
-        )
+        return <OutboundOperations />
       case 'mobile':
         return <MobileScannerInterface />
       case 'reports':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Reports & Analytics</h1>
-            <p className="text-gray-600">Reports and analytics features coming soon...</p>
-          </div>
-        )
+        return <ReportsAnalytics />
       case 'settings':
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Settings</h1>
-            <p className="text-gray-600">Settings features coming soon...</p>
-          </div>
-        )
+        return <Settings />
       default:
         return <Dashboard />
     }
